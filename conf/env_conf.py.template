@@ -1,0 +1,10 @@
+global_params = {
+    "docker": {
+        "username": "aaaaa",
+        "password": "bbbbb"
+    },
+    "nfs": {
+        "server": "",
+        "path": ""
+    }
+}
