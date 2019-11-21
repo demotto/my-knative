@@ -7,13 +7,13 @@ import yaml
 
 
 def write_str_file(str, file):
-    with open(file, 'w') as f:
+    with open(file, 'w', encoding='utf8') as f:
         f.write(str)
 
 
 def write_yaml_file(obj, file):
-    with open(file, 'w') as f:
-        yaml.dump(obj, f, yaml.RoundTripDumper)
+    with open(file, 'w', encoding='utf8') as f:
+        yaml.dump(obj, f)
 
 
 # def write_multi_yaml_file(objs, file):
@@ -26,12 +26,12 @@ def write_yaml_file(obj, file):
 
 
 def read_str_file(file):
-    with open(file, 'r') as f:
+    with open(file, 'r', encoding='utf8') as f:
         return f.read()
 
 
 def read_yaml_file(file):
-    with open(file, 'r') as f:
+    with open(file, 'r', encoding='utf8') as f:
         s = f.read()
         return yaml.safe_load_all(s)
 
