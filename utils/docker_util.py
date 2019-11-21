@@ -1,6 +1,12 @@
 import subprocess as commands
 import os
 
+from os import sys, path
+from importlib import reload
+reload(sys)
+sys.path.append(path.dirname(path.abspath(__file__)))
+sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+
 from conf import env_conf
 
 

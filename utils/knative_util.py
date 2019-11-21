@@ -1,13 +1,22 @@
-from conf import env_conf
-from utils import file_util
-from utils import docker_util
+
+
+
 from pathlib import Path
 import requests
 import http_util
 import os
 import re
 
+from os import sys, path
+from importlib import reload
+reload(sys)
+sys.path.append(path.dirname(path.abspath(__file__)))
+sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 
+
+from conf import env_conf
+from utils import file_util
+from utils import docker_util
 
 def download_deployments():
     urls = env_conf.global_params['deploy_urls']
