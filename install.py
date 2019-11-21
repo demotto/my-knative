@@ -19,11 +19,11 @@ def install_meta(prefix):
 
 
 def install_crd():
-    install_meta("kubectl apply -f --selector knative.dev/crd-install=true ")
+    install_meta("kubectl apply --selector knative.dev/crd-install=true ")
 
 
 def install_fully():
-    install_meta("kubectl apply -f ")
+    install_meta("kubectl apply ")
 
 
 if __name__ == '__main__':
