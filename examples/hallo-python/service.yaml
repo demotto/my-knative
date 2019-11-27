@@ -1,7 +1,7 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: helloworld-python
+  name: hallo-python
   namespace: default
 spec:
   template:
